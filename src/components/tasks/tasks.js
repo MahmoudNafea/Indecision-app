@@ -4,8 +4,14 @@ import Task from '../task/task'
 const Tasks = (props) => {
     return (
         <div>
-            <button onClick={props.removeAllHandler}>Remove All</button>
-            {props.tasks.map((task) => <Task key={task} taskText={task} removeTaskHandler={props.removeTaskHandler} />)}
+            <div className="widget-header">
+                <h3 className="widget-header__title">Your Tasks</h3>
+                <button className="small-button small-button--link"
+                    onClick={props.removeAllHandler}>Remove All</button>
+            </div>
+            {props.tasks.length === 0 && <p className="widget__message">Please add tasks to get started</p>}
+            {props.tasks.map((task) => <Task key={task} taskText={task}
+                removeTaskHandler={props.removeTaskHandler} />)}
         </div>
     )
 }

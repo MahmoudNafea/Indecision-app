@@ -4,7 +4,8 @@ const Task = (props) => {
     return (
         <div>
             {props.taskText}
-            <button onClick={(e) => { props.removeTaskHandler(props.taskText); }}>Remove</button>
+            <button className="small-button small-button--link"
+                onClick={(e) => { props.removeTaskHandler(props.taskText); }}>Remove</button>
         </div>
     )
 }

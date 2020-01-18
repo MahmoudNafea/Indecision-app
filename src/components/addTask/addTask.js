@@ -20,7 +20,7 @@ class AddTask extends Component {
                 {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.submitHandler}>
                     <input placeholder="Add your task" name="taskInput" />
-                    <button type="submit">Add Task</button>
+                    <button className="small-button" type="submit">Add Task</button>
                 </form>
             </div>
         )

@@ -58,16 +58,20 @@ class App extends Component {
     this.setState({ showModal: false })
   }
   render() {
-    const title = 'To do app'
+    const title = 'Indecision'
     const subtitle = 'Make your life better with technology'
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
-        <RequiredTasks hasTasks={this.state.tasks.length > 0}
-          requiredTasksHandler={this.requiredTasksHandler} />
-        <Tasks removeTaskHandler={this.removeTaskHandler} tasks={this.state.tasks}
-          removeAllHandler={this.removeAllHandler} />
-        <AddTask addTaskHandler={this.addTaskHandler} />
+        <div className="container">
+          <RequiredTasks hasTasks={this.state.tasks.length > 0}
+            requiredTasksHandler={this.requiredTasksHandler} />
+          <div className="widget">
+            <Tasks removeTaskHandler={this.removeTaskHandler} tasks={this.state.tasks}
+              removeAllHandler={this.removeAllHandler} />
+            <AddTask addTaskHandler={this.addTaskHandler} />
+          </div>
+        </div>
         <TasksModal showModal={this.state.showModal} tasks={this.state.tasks}
           closeModalHandler={this.closeModalHandler} />
       </div>
