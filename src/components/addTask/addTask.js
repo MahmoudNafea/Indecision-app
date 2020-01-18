@@ -17,9 +17,9 @@ class AddTask extends Component {
     render() {
         return (
             <div>
-                {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.submitHandler}>
-                    <input placeholder="Add your task" name="taskInput" />
+                {this.state.error && <p className="add-task-error">{this.state.error}</p>}
+                <form className="add-task" onSubmit={this.submitHandler}>
+                    <input className="add-task__input" placeholder="Add your task" name="taskInput" />
                     <button className="small-button" type="submit">Add Task</button>
                 </form>
             </div>

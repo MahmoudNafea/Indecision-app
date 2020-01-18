@@ -57,6 +57,7 @@ class App extends Component {
   closeModalHandler = () => {
     this.setState({ showModal: false })
   }
+
   render() {
     const title = 'Indecision'
     const subtitle = 'Make your life better with technology'

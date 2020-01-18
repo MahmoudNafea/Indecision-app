@@ -10,7 +10,7 @@ const Tasks = (props) => {
                     onClick={props.removeAllHandler}>Remove All</button>
             </div>
             {props.tasks.length === 0 && <p className="widget__message">Please add tasks to get started</p>}
-            {props.tasks.map((task) => <Task key={task} taskText={task}
+            {props.tasks.map((task, index) => <Task count={index + 1} key={task} taskText={task}
                 removeTaskHandler={props.removeTaskHandler} />)}
         </div>
     )

@@ -1,0 +1,21 @@
+.add-task-error{
+    color: $off-white;
+    font-style: italic;
+    margin: $m-size 0 0 0;
+    padding: 0 $m-size;
+}
+
+.add-task{
+    display: flex;
+    padding: $m-size;
+}
+
+.add-task__input{
+    flex-grow: 1;
+    background: $dark-blue;
+    color: white;
+    border: none;
+    border-bottom: 0.3rem solid darken($color: $dark-blue, $amount: 10%);
+    margin-right: $m-size;
+    padding: $m-size;
+}
