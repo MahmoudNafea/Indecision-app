@@ -7,6 +7,7 @@
 
 .add-task{
     display: flex;
+    flex-direction: column;
     padding: $m-size;
 }
 
@@ -16,6 +17,16 @@
     color: white;
     border: none;
     border-bottom: 0.3rem solid darken($color: $dark-blue, $amount: 10%);
-    margin-right: $m-size;
-    padding: $m-size;
+    margin: 0 0 $m-size 0;
+    padding: $s-size;
+}
+
+// for desktop if for mobile we use max-width
+@media(min-width:45rem){
+.add-task{
+    flex-direction: row;
+}
+.add-task__input{
+    margin: 0 $s-size 0 0;
+}
 }

@@ -1,7 +1,7 @@
 .header {
     background: $off-black;
     color: white;
-    margin-bottom: $xl-size;
+    margin-bottom: $m-size;
     padding: $m-size 0;
   }
   
@@ -15,5 +15,13 @@
     font-size: $m-size;
     font-weight: 500;
     margin: 0;
+  }
+
+  // for desktop if for mobile we use max-width
+  @media(min-width:45rem){
+.header{
+  margin-bottom: $xl-size;
+
+}
   }
   

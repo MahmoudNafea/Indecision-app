@@ -6,7 +6,7 @@
     font-size: $l-size;
     font-weight: bold;
     width: 100%;
-    margin-bottom: $xl-size;
+    margin-bottom: $m-size;
     padding: 2.4rem;
 }
 .big-button:disabled{
@@ -27,4 +27,10 @@
     border: none;
     color: $off-white;
     padding: 0px;
+}
+// for desktop if for mobile we use max-width
+@media(min-width:45rem){
+    .big-button{
+        margin-bottom: $xl-size;
+    }
 }
