@@ -4,7 +4,7 @@ const RequiredTasks = (props) => {
     return (
         <div>
             <button className="big-button" disabled={!props.hasTasks}
-                onClick={props.requiredTasksHandler}>What I should do?</button>
+                onClick={props.requiredTasksHandler}>What should I do?</button>
         </div >
     )
 }

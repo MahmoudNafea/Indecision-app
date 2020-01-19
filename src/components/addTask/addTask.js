@@ -6,13 +6,16 @@ class AddTask extends Component {
         this.submitHandler = this.submitHandler.bind(this)
     }
     state = {
-        error: undefined
+        error: undefined,
     }
     submitHandler(e) {
         e.preventDefault()
         const task = e.target.elements.taskInput.value.trim()
         const error = this.props.addTaskHandler(task)
         this.setState({ error: error })
+        if (!error) {
+            e.target.elements.taskInput.value = '';
+        }
     }
     render() {
         return (
